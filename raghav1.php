@@ -31,15 +31,18 @@
 	text-align:center;
 	color: #FFF;
 		}
-
+		
+		
+		
 .image{
 	width:100%;
-	height:250px;
-	background-image:url(1.jpg);
+	height:100px;
+	background-image:url(../Assignment/1.jpg);
 	float:left;
 	text-align:center;
 	color: #FFF;
 		}
+		
 		
 		.leftcontent{
 	width:50%;
@@ -49,21 +52,26 @@
 	float:left;
 	text-align:center;
 	color: #F00;
-		}
-		
-.rightcontent{
+	}
+	
+	.rightcontent{
 	width:50%;
 	height:250px;
 	
-	background-color: #F90;
+	background-color:#F90;
 	float:left;
 	text-align:center;
 	color: #FFF;
 		}		
+	
+	
+	
+
+	
 
 
 
-
+	
 .frontform{
 	margin-top:10px;
 }
@@ -71,9 +79,9 @@
 <script language="javascript1.5">
 function f1()
 {
-var pa=parseInt(document.getElementById('pa').value);
+var course=parseInt(document.getElementById('course').value);
 var duration=parseInt(document.getElementById('duration').value);
-var total=pa +(pa*10*duration)/100;
+var total=course*duration;
 document.getElementById('ta').value=total;
 }
 function f2()
@@ -91,12 +99,13 @@ alert('Contact Number should be a numeric value only ');
 //document.getElementById('uname').value=data;	
 	}	
 </script>
-
 </head>
 <body>
 <div class="header">
 Site's Header 
 </div>
+
+
 <div class="menu">
 Site's Menu
 </div>
@@ -104,11 +113,37 @@ Site's Menu
 
 
 
-
 <div class="image">
+Site's image 
 </div>
+
+
+
 <div class="leftcontent">
+<form method="post" >
+<div class="frontform">
+<select name="course" id="course" required="required">
+<option value="">select course</option>
+<option value="20000">Fashion Design</option>
+<option value="100000">B.Tech</option>
+<option value="25000">BCA</option>
+</select>
 </div>
+
+
+<div class="frontform"><input type="number" name="duration" id="duration" placeholder="Duration" onblur="f1()"  /></div>
+<div class="frontform"><input type="number" name="ta" id="ta" readonly="readonly" placeholder="Total Amount" /></div>
+
+<div class="frontform"><input type="submit" name="duration"  /></div>
+</div>
+</form>
+
+</div>
+
+
+
+
+
 
 <div class="rightcontent">
 <form method="POST">
@@ -130,26 +165,15 @@ Other<input type="checkbox" name="other" value="other" />
 </select>
 <input type="submit" name="submit"  />
 </div>
-</div>
 </form>
 
-<div class="leftcontent">
-<form method="post">
-<div class="frontform">
-<select name="course" id="course" required="required">
-<option value ="20000" >BCA </option>
-<option value ="30000">BBA </option>
-<option value ="50000">B.TECH </option>
-</select>
 </div>
-<div class="frontform"><input type="number" name="duration"
-id="duration" place holder="duration" onblur="f1()"/></div>
-<div class="frontform"><input type="number" name="ta" id="ta"
-readonly="readonly" placeholder="TOATL AMOUNT"/</div>
-
 
 <div class="footer">
+site's footer
+
 </div>
+
 
 </body>
 </html>
